@@ -1,0 +1,82 @@
+create table if not exists cust_mining2.c6_company_feature_train
+(
+customer_no  string comment '客户id',   
+op_date string comment '当前日期',
+top1_basiceps double , 
+top1_netassetps double , 
+top1_cashflowps double , 
+top1_netprofit double , 
+top1_pe double , 
+top1_pb double , 
+top1_roe double , 
+top1_roa double , 
+top1_grossincomeratio double , 
+top1_operatingrevenuegrowrate double , 
+top1_netprofitgrowrate double , 
+top1_netassetgrowrate double , 
+top1_basicepsyoy double , 
+top1_operatingnitotp double , 
+top1_opercashintoasset double , 
+top1_currentratio double , 
+top2_basiceps double , 
+top2_netassetps double , 
+top2_cashflowps double , 
+top2_netprofit double , 
+top2_pe double , 
+top2_pb double , 
+top2_roe double , 
+top2_roa double , 
+top2_grossincomeratio double , 
+top2_operatingrevenuegrowrate double , 
+top2_netprofitgrowrate double , 
+top2_netassetgrowrate double , 
+top2_basicepsyoy double , 
+top2_operatingnitotp double , 
+top2_opercashintoasset double , 
+top2_currentratio double ,
+label string comment'样本标签 '
+)
+partitioned by (part_date varchar(8)) 
+stored as parquet
+
+
+
+create table if not exists cust_mining2.c6_company_feature_test
+(
+customer_no  string comment '客户id',   
+op_date string comment '当前日期',
+top1_basiceps double , 
+top1_netassetps double , 
+top1_cashflowps double , 
+top1_netprofit double , 
+top1_pe double , 
+top1_pb double , 
+top1_roe double , 
+top1_roa double , 
+top1_grossincomeratio double , 
+top1_operatingrevenuegrowrate double , 
+top1_netprofitgrowrate double , 
+top1_netassetgrowrate double , 
+top1_basicepsyoy double , 
+top1_operatingnitotp double , 
+top1_opercashintoasset double , 
+top1_currentratio double , 
+top2_basiceps double , 
+top2_netassetps double , 
+top2_cashflowps double , 
+top2_netprofit double , 
+top2_pe double , 
+top2_pb double , 
+top2_roe double , 
+top2_roa double , 
+top2_grossincomeratio double , 
+top2_operatingrevenuegrowrate double , 
+top2_netprofitgrowrate double , 
+top2_netassetgrowrate double , 
+top2_basicepsyoy double , 
+top2_operatingnitotp double , 
+top2_opercashintoasset double , 
+top2_currentratio double 
+)
+partitioned by (part_date varchar(8)) 
+stored as parquet
