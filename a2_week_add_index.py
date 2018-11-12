@@ -37,7 +37,7 @@ def add_statistics(raw_df,every_day_name):
 
 
     #合并
-    df = pd.concat([raw_df,df_null,df_diff,df_mean,df_std,df_more_avg_num,df_diff_more_avg_num],axis=1)
+    df = pd.concat([df_null,df_diff,df_mean,df_std,df_more_avg_num,df_diff_more_avg_num],axis=1)
     return df
 
 

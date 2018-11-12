@@ -414,7 +414,6 @@ week_every_date_stock_position =  pd.pivot_table(week_every_date_stock_position,
 week_every_date_stock_position.columns=[x + 'stock_position' for x in workday_list ]
 week_every_date_stock_position = week_every_date_stock_position.reset_index()
 week_every_date_stock_position = add_statistics(week_every_date_stock_position,'stock_position')
-
 week_every_date_stock_position = hql.createDataFrame(week_every_date_stock_position)
 week_every_date_stock_position.registerTempTable('week_every_date_stock_position')
 
@@ -480,11 +479,6 @@ try:
                 nvl(one_date_asset_amount,0) as one_date_asset_amount,
                 nvl(week_date_asset_amount,0) as week_date_asset_amount,
                 nvl(month_date_asset_amount,0) as month_date_asset_amount,
-                five_stock_position,
-                four_stock_position,
-                three_stock_position,
-                two_stock_position,
-                one_stock_position,
                 null_stock_position,
                 diff_four_stock_position,
                 diff_three_stock_position,
@@ -494,11 +488,6 @@ try:
                 std_stock_position,
                 more_avg_num_stock_position,
                 diff_more_avg_num_stock_position,
-                five_deposit_rate,
-                four_deposit_rate,
-                three_deposit_rate,
-                two_deposit_rate,
-                one_deposit_rate,
                 null_deposit_rate,
                 diff_four_deposit_rate,
                 diff_three_deposit_rate,
